@@ -1,0 +1,39 @@
+/* header */
+.menu-area {
+    background-color: $white-color;
+    border-bottom: 1px solid $border-color;
+    padding: 15px 0;
+    .logo-area {
+        img {
+            max-width: 120px;
+        }
+    }
+    .nav-right-content {
+        text-align: right;
+        @include all-phone-tablet {
+            display: none;
+        }
+    }
+    @include all-phone-tablet {
+        padding: 20px 0;
+    }    
+    &.fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: $white-color;
+        animation: fixed_top 1s;
+        z-index: 999;
+    }
+}
+
+@keyframes fixed_top {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 0;
+    }
+}

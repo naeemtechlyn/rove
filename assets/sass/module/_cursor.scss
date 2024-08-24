@@ -1,0 +1,32 @@
+/* cursor */
+.cursor-border {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid $primary-color;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 9998;
+    @include all-phone-tablet {
+        display: none;
+    }
+}
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: $primary-color;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 9998;
+    @include all-phone-tablet {
+        display: none;
+    }
+}

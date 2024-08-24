@@ -1,0 +1,51 @@
+/*-------------------------------------------------------------
+theme name: Rove - Creative Agency HTML Template
+theme uri: https://themes.techlynstudio.com/html/rove
+author: Techlyn
+author uri: https://techlynstudio.com/
+version: 1.0.0
+text domain: rove
+-------------------------------------------------------------*/
+
+/*------------------------------------------------------------- 
+TABLE OF CONTENTS: 
+---------------------------------------------------------------
+>> author css
+>> navbar
+>> header
+>> footer
+>> breadcrumb
+>> tab & accordion
+>> animation
+>> button 
+>> cursor 
+>> form
+>> preloader
+>> spacing
+>> theme
+--------------------------------------------------------------*/
+
+// setting
+@import 'settings/variable';
+@import 'settings/mixin';
+
+// base
+@import 'base/base';
+
+// layout
+@import 'layout/navbar';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/breadcrumb';
+
+// module
+@import 'module/accordion';
+@import 'module/animation';
+@import 'module/button';
+@import 'module/cursor';
+@import 'module/form';
+@import 'module/preloader';
+@import 'module/spacing';
+
+// theme 
+@import 'theme/theme';

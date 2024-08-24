@@ -1,0 +1,115 @@
+/* navbar */
+nav {
+    // home menu
+    .main-menu {
+        li {
+            display: inline-block;
+            position: relative;
+            margin-right: 0;
+            margin: 0 12px;
+            line-height: 1.7;
+            z-index: 1;
+            @include all-phone-tablet {
+                margin: 0;
+            }
+            &.has-submenu {
+                &::after {
+                    content: '\002B';
+                    color: $black-color;
+                    font-size: 20px;
+                    margin-left: 2px;
+                    position: relative;
+                    top: 2px;
+                    transition: $transition;
+                    @include all-phone-tablet {
+                        display: none;
+                    }
+                }
+
+            }
+            a {
+                color: $black-color;
+                padding: 15px 0;
+                font-weight: 400;
+                display: inline-block;
+                font-size: 16px;
+                text-transform: capitalize;
+            }
+
+            @include all-desktop {
+                // submenu
+                .submenu {
+                    position: absolute;
+                    width: 200px;
+                    top: 136%;
+                    left: 0;
+                    background: $white-color;
+                    border: 1px solid $border-color;
+                    padding: 10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: $transition;
+                    text-align: left;
+
+                    li {
+                        display: block;
+                        margin-right: initial;
+
+                        a {
+                            color: $black-color;
+                            display: block;
+                            padding: 6px;
+                            width: 100%;
+
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+
+                    }
+                }
+                &:hover {
+                    &.has-submenu {
+                        &::after {
+                            color: $black-color;
+                        }
+                    }
+                    a {
+                        color: $black-color;
+
+                    }
+                    .submenu {
+                        top: 126%;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// phone menu
+.mean-container {
+    .mean-nav {
+        background: $primary-color;
+        @include all-phone-tablet {
+            margin-top: 64px;
+        }
+    }
+
+    .mean-bar {
+        z-index: 1;
+        a.meanmenu-reveal {
+            background: $white-color;
+            border: 1px solid $primary-color;
+            top: 8px;
+            right: 20px!important;
+            @include all-phone-tablet {
+                top: 6px;
+            }
+        }
+    }
+
+}

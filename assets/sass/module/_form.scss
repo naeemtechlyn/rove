@@ -1,0 +1,60 @@
+/* form */
+.contact-form {
+    form {
+        .single-form-input {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 30px;
+
+            label {
+                width: 280px;
+
+                font-size: 30px;
+                font-weight: 500;
+
+                @include all-phone {
+                    font-size: 24px;
+                }
+            }
+
+            input,
+            textarea {
+                border: 0;
+                border-bottom: 1px solid $border-color;
+                padding: 15px;
+                width: 560px;
+                &::placeholder {
+                    color: $border-color;
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: $primary-font;
+                }
+            }
+
+            textarea {
+                height: 80px;
+            }
+        }
+
+        .form-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            label {
+                a {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -3px;
+                        right: 0;
+                        width: 80%;
+                        height: 1px;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

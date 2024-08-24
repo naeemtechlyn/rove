@@ -1,0 +1,17 @@
+// theme font
+$primary-font:  "Be Vietnam Pro", sans-serif;
+$secondary-font:  "Playfair Display", serif;
+
+// theme color
+$primary-color: #141414;
+$secondary-color: #6D6D6D;
+$white-color: #ffffff;
+$black-color: #000000;
+$border-color: #B0B0B0;
+
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap');
+
+// transition
+$transition: all .3s ease-in;
+$transition-long: all .5s ease-in;
