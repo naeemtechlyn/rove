@@ -224,6 +224,7 @@
     justify-content: center;
     border-right: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
+
     img {
         width: auto;
     }
@@ -302,3 +303,109 @@
         }
     }
 }
+
+.blog-area {
+    .swiper {
+        position: relative;
+        padding-bottom: 150px;
+    }
+
+    .swiper-button-next {
+        width: 45px;
+        position: absolute;
+        right: 43%;
+        top: 96%;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .swiper-button-prev {
+        width: 45px;
+        position: absolute;
+        left: 43%;
+        top: 96%;
+
+        img {
+            transform: rotate(180deg);
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.single-blog {
+    .blog-contant {
+        .blog-thumble {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                color: $secondary-color;
+            }
+        }
+
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+.award-area {
+    .award-tab {
+        ul {
+            li {
+                display: flex;
+                padding: 40px 0;
+                border-bottom: 1px solid $border-color;
+                color: $secondary-color;
+
+                &:first-child {
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $secondary-color;
+                }
+
+                &:first-child:hover {
+                    cursor: auto;
+                }
+
+                span {
+                    width: 200px;
+                    margin-left: 100px;
+
+                }
+
+                &.active {
+                    font-weight: 600;
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .award-content {
+        display: none;
+        margin-left: 30px;
+
+        .award-text {
+            margin-top: 40px;
+            h5{
+                color: $primary-color;
+            }
+            p{
+                color: $secondary-color;
+                margin-bottom: 0;
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
