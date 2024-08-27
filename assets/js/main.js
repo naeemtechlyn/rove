@@ -1,5 +1,5 @@
 (function ($) {
-    
+
     "use strict"
     $(document).ready(function () {
 
@@ -33,10 +33,10 @@
         });
 
         // service single
-        $('.service-single').hover(function() {
-            $('.service-single').removeClass('active');  
-            $(this).addClass('active');  
-        });        
+        $('.service-single').hover(function () {
+            $('.service-single').removeClass('active');
+            $(this).addClass('active');
+        });
         $('.service-single:nth-child(2)').addClass('active');
 
         // testimonial slider 
@@ -49,6 +49,30 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+        });
+
+        // blog-slider
+        var swiper = new Swiper(".blog-slider", {
+            slidesPerView: 2,
+            spaceBetween: 60,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        //tab
+        // service details tab
+        $('.tab-link').on('click', function (event) {
+            event.preventDefault(); // Prevent the default action of the <a> tag
+
+            var tab_id = $(this).attr('data-tab');
+
+            $('.tab-link').removeClass('active');
+            $('.tab-content').removeClass('active');
+
+            $(this).addClass('active');
+            $("#" + tab_id).addClass('active');
         });
 
     });
